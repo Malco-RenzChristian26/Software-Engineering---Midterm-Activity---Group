@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecureOne Bank</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="app">
+
+        <section id="loginPage" class="login-page">
+            <div class="logo">🏛️</div>
+            <h1>SecureOne Bank</h1>
+            <p class="tagline">Secure Banking. Brighter Future.</p>
+
+            <div id="errorBox" class="error-box hidden" role="alert">
+                <span class="error-icon">!</span>
+                <div id="errorMessage"></div>
+            </div>
+
+            <div id="lockedBox" class="locked-box hidden">
+                <div class="lock-icon">🔒</div>
+                <h2>Account Locked</h2>
+                <p>Your account has been locked after 3 failed attempts.</p>
+                <p>Please contact support for assistance.</p>
+                <button id="supportButton" class="outline-button">
+                    Contact Support
+                </button>
+            </div>
+
+            <div id="loginFormArea">
+                <h2 class="welcome">Welcome Back</h2>
+                <p class="subtitle">Log in to your account.</p>
+
+                <form id="loginForm">
+                    <label for="username">Username</label>
+                    <input
+                        type="text"
+                        id="username"
+                        placeholder="Enter your username"
+                        autocomplete="username"
+                        required
+                    >
+
+                    <label for="password">Password</label>
+                    <div class="password-wrapper">
+                        <input
+                            type="password"
+                            id="password"
+                            placeholder="Enter your password"
+                            autocomplete="current-password"
+                            required
+                        >
+                        <button
+                            type="button"
+                            id="togglePassword"
+                            class="eye-button"
+                            aria-label="Show password"
+                        >👁</button>
+                    </div>
+
+                    <button type="submit" id="loginButton" class="primary-button">
+                        Log In
+                    </button>
+                </form>
+
+                <button type="button" id="forgotButton" class="link-button">
+                    Forgot Password?
+                </button>
+
+               
+            </div>
+        </section>
+
+        <section id="dashboardPage" class="dashboard hidden">
+            <header class="dashboard-header">
+                <div class="brand">
+                    <span>🏛️</span>
+                    <span>SecureOne Bank</span>
+                </div>
+                <button id="logoutButton" class="logout-button">
+                    Log Out
+                </button>
+            </header>
+
+            <div class="dashboard-content">
+                <h2>Welcome!</h2>
+                <p>You have successfully logged in.</p>
+
+                <section class="balance-card">
+                    <h3>▰ Account Summary</h3>
+                    <p>Available Balance</p>
+                    <div class="balance">₱25,430.00</div>
+                    <p class="demo-label">SAMPLE BALANCE — NOT REAL MONEY</p>
+                </section>
+
+                <div class="feature-grid">
+                    <button class="feature-card" data-feature="Transfer">
+                        <span>⇄</span>
+                        <strong>Transfer</strong>
+                    </button>
+
+                    <button class="feature-card" data-feature="Pay Bills">
+                        <span>▤</span>
+                        <strong>Pay Bills</strong>
+                    </button>
+
+                    <button class="feature-card" data-feature="Transaction History">
+                        <span>◷</span>
+                        <strong>Transaction History</strong>
+                    </button>
+
+                    <button class="feature-card" data-feature="Settings">
+                        <span>⚙</span>
+                        <strong>Settings</strong>
+                    </button>
+                </div>
+
+                <section class="transactions">
+                    <div class="transaction-heading">
+                        <h3>Recent Transactions</h3>
+                        <span>Sample Data</span>
+                    </div>
+
+                    <div class="transaction">
+                        <div>
+                            <strong>Online Transfer</strong>
+                            <p>September 14, 2026</p>
+                        </div>
+                        <strong class="expense">- ₱2,000.00</strong>
+                    </div>
+
+                    <div class="transaction">
+                        <div>
+                            <strong>Deposit</strong>
+                            <p>September 12, 2026</p>
+                        </div>
+                        <strong class="income">+ ₱5,000.00</strong>
+                    </div>
+
+                    <div class="transaction">
+                        <div>
+                            <strong>Payment</strong>
+                            <p>September 10, 2026</p>
+                        </div>
+                        <strong class="expense">- ₱1,200.00</strong>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
